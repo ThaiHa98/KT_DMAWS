@@ -1,0 +1,8 @@
+﻿Câu 1:
+-Tính Linh Hoạt và Mở Rộng:
+Lựa chọn một công nghệ linh hoạt và có khả năng mở rộng giúp dễ dàng thích ứng với sự biến động của nhu cầu người dùng. Nếu công nghệ có khả năng mở rộng, bạn có thể thêm mới tính năng, tối ưu hóa hiệu suất và đáp ứng nhanh chóng khi nhu cầu tăng lên.
+-Hiệu Suất và Tối Ưu Hóa Chi Phí:
+Lựa chọn công nghệ có hiệu suất tốt có thể giảm chi phí vận hành và bảo trì hệ thống. Một hệ thống có hiệu suất tốt có thể xử lý một lượng lớn người dùng mà không gặp vấn đề về tốc độ và giảm độ trễ, từ đó giảm chi phí liên quan đến tăng cường cơ sở hạ tầng.
+Khả Năng Tương Thích và Môi Trường Phát Triển:
+
+-Sự tương thích và khả năng làm việc với môi trường phát triển là quan trọng. Nếu một công nghệ có thể tương thích tốt với các công cụ, framework, và môi trường phát triển hiện tại, nó có thể giúp giảm thời gian và chi phí đào tạo, triển khai, và bảo trì.

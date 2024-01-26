@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+</head>
+<body>
+
+    <h1>Order Management</h1>
+
+    <h2>Create Order</h2>
+    <label for="createOrderName">Name:</label>
+    <input type="text" id="createOrderName">
+
+    <label for="createOrderQuantity">Quantity:</label>
+    <input type="number" id="createOrderQuantity">
+
+    <button onclick="createOrder()">Create Order</button>
+
+    <h2>Update Order</h2>
+    <label for="updateOrderId">Order ID:</label>
+    <input type="number" id="updateOrderId">
+
+    <label for="updateOrderName">Updated Name:</label>
+    <input type="text" id="updateOrderName">
+
+    <label for="updateOrderQuantity">Updated Quantity:</label>
+    <input type="number" id="updateOrderQuantity">
+
+    <button onclick="updateOrder()">Update Order</button>
+
+    <script>
+        const apiUrl = "https://localhost:7148/api/Order/updateOrder";
+
+        function createOrder() {
+            const createOrderName = document.getElementById("createOrderName").value;
+            const createOrderQuantity = document.getElementById("createOrderQuantity").value;
+
+            const createOrderData = {
+                name: createOrderName,
+                quantity: createOrderQuantity
+            };
+
+            fetch(apiUrl, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(createOrderData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Order created successfully:", data);
+                // Handle success, update UI, etc.
+            })
+            .catch(error => {
+                console.error("Error creating order:", error);
+                // Handle error, show error message, etc.
+            });
+        }
+
+        function updateOrder() {
+            const updateOrderId = document.getElementById("updateOrderId").value;
+            const updateOrderName = document.getElementById("updateOrderName").value;
+            const updateOrderQuantity = document.getElementById("updateOrderQuantity").value;
+
+            const updateOrderData = {
+                name: updateOrderName,
+                quantity: updateOrderQuantity
+            };
+
+            fetch(`${apiUrl}?id=${updateOrderId}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(updateOrderData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Order updated successfully:", data);
+                // Handle success, update UI, etc.
+            })
+            .catch(error => {
+                console.error("Error updating order:", error);
+                // Handle error, show error message, etc.
+            });
+        }
+    </script>
+
+</body>
+</html>
